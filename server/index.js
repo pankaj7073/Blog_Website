@@ -20,7 +20,7 @@ const PORT = process.env.PORT;
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
-Connection(username, password);
+Connection();
 
 // static files
 app.use(express.static(path.join(__dirname, "../client/build")));

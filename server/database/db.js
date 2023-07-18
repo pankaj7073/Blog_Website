@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
-
-const Connection = async (username, password) => {
-  const URL = `mongodb+srv://${username}:${password}@cluster0.ifqocod.mongodb.net/Blog_Users?retryWrites=true&w=majority`;
+import dotenv from "dotenv";
+dotenv.config();
+const Connection = async () => {
+  const URL = `mongodb+srv://pv516712:pankaj9468@cluster0.ifqocod.mongodb.net/Blog_Users?retryWrites=true&w=majority`;
   try {
     await mongoose.connect(URL, { useNewUrlParser: true });
     console.log("Database connected successfully");
